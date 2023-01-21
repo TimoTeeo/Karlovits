@@ -10788,6 +10788,7 @@ textarea.form-control-lg {
 }
 
 body {
+  overflow-x: hidden;
   height: 100vh;
   width: 100%;
   background-color: #f0fbf7 !important;
