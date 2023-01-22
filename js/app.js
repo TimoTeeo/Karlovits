@@ -1,5 +1,5 @@
 'use strict';
-
+const header = document.querySelector('.header');
 const menuBurger = document.getElementById('header-menu');
 const dropdownMenu = document.querySelector('.header__menu--dropdown');
 const workLink = document.querySelector('.work-link');
@@ -7,6 +7,15 @@ const dropdownMenuWork = document.querySelector('.header__menu--dropdown--work-n
 const backArrow = document.querySelector('.arrow-container img');
 
 console.log(dropdownMenu);
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 5) {
+        header.classList.add('setBackground');
+    }
+    else {
+        header.classList.remove('setBackground');
+    }
+})
+
 menuBurger.addEventListener('click', function() {
     if (dropdownMenuWork.classList.contains('show')) {
         dropdownMenuWork.classList.remove('show');

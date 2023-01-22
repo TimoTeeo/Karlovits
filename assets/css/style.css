@@ -10783,12 +10783,15 @@ textarea.form-control-lg {
   text-decoration: none !important;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 #gallery-modal .modal-img {
   width: 100%;
 }
 
 body {
-  overflow-x: hidden;
   height: 100vh;
   width: 100%;
   background-color: #f0fbf7 !important;
@@ -10799,13 +10802,22 @@ body {
   max-width: 1680px !important;
 }
 
+.setBackground {
+  background-color: #f0fbf7;
+}
+
 .header {
   display: flex;
   height: 120px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
   /* Rotate first bar */
   /* Fade out the second bar */
   /* Rotate last bar */
+}
+.header .container {
+  position: relative;
 }
 .header a {
   color: #000;
@@ -10834,16 +10846,17 @@ body {
   padding-top: 6px;
 }
 .header__menu--dropdown {
-  overflow-x: hidden;
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   opacity: 0;
-  top: -39px;
-  transform: translateX(500px);
-  right: -20px;
+  top: 0;
+  transform: translateX(900px);
+  right: 0;
   pointer-events: none;
   background-color: #fff;
   transition: all 0.4s ease-in-out;
+  padding-top: 20px;
+  padding-right: 20px;
 }
 .header__menu--dropdown ul {
   padding: 0;
@@ -10851,7 +10864,7 @@ body {
 }
 .header__menu--dropdown ul li {
   padding: 0 20px;
-  margin: 40px 0;
+  margin: 30px 0;
 }
 .header__menu--dropdown ul li a {
   font-size: 18px;
@@ -10886,18 +10899,19 @@ body {
   transition: all 0.4s ease-in-out;
 }
 .header__menu--dropdown--work-nested {
-  overflow-x: hidden;
-  z-index: -1;
+  z-index: 1;
   position: absolute;
   opacity: 0;
-  top: -39px;
+  top: 0;
   transform: translateX(500px);
-  right: -20px;
+  right: 0;
   pointer-events: none;
   background-color: #fff;
   transition: all 0.4s ease-in-out;
   padding: 0;
   text-align: center;
+  padding-top: 15px;
+  padding-right: 20px;
 }
 .header__menu--dropdown--work-nested .arrow-container {
   display: flex;
@@ -10905,7 +10919,7 @@ body {
 }
 .header__menu--dropdown--work-nested li {
   padding: 0 20px;
-  margin: 40px 0;
+  margin: 30px 0;
 }
 .header__menu--dropdown--work-nested li a {
   font-size: 18px;
@@ -10956,6 +10970,7 @@ body {
   position: absolute;
   top: 50px;
   right: 20%;
+  z-index: -1;
 }
 .header__image img {
   max-width: 100%;
@@ -11073,6 +11088,9 @@ body {
   row-gap: 20px;
 }
 
+.category-entry {
+  margin-top: 120px;
+}
 .category-entry .work-grid-categories img {
   height: 400px;
   object-fit: cover;
