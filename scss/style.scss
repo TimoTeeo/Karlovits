@@ -53,6 +53,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
     a {
         color: #000;
         &:hover {
@@ -268,6 +269,7 @@ body {
 
 // INFO PAGE
 .about {
+    margin-top: 120px;
     &--info {
         flex-direction: column;
         row-gap: 50px;
@@ -291,7 +293,7 @@ body {
 // WORK(categories) PAGE
 
 .work {
-
+    margin-top: 120px;
    &-grid-categories {
     margin-top: 50px;
     @include media-breakpoint-up(md) {
@@ -337,6 +339,13 @@ body {
                 display: block;
             }
         }
+    }
+
+    img {
+        pointer-events: none;
+    }
+    @include media-breakpoint-up(lg) {
+        pointer-events: all;
     }
 }
 

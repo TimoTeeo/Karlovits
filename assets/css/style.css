@@ -10812,6 +10812,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
   /* Rotate first bar */
   /* Fade out the second bar */
   /* Rotate last bar */
@@ -11042,6 +11043,9 @@ body {
   color: #fff;
 }
 
+.about {
+  margin-top: 120px;
+}
 .about--info {
   flex-direction: column;
   row-gap: 50px;
@@ -11065,6 +11069,9 @@ body {
   }
 }
 
+.work {
+  margin-top: 120px;
+}
 .work-grid-categories {
   margin-top: 50px;
 }
@@ -11102,6 +11109,14 @@ body {
 @media (min-width: 992px) {
   .img-magnifier-container:hover .img-magnifier-glass {
     display: block;
+  }
+}
+.img-magnifier-container img {
+  pointer-events: none;
+}
+@media (min-width: 992px) {
+  .img-magnifier-container {
+    pointer-events: all;
   }
 }
 
