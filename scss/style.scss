@@ -476,19 +476,13 @@ body {
 
 .img-magnifier-container {
     position: relative;
-
+    pointer-events: none;
     @include media-breakpoint-up(lg) {
         &:hover {
             .img-magnifier-glass {
                 opacity: 1;
             }
         }
-    }
-
-    img {
-        pointer-events: none;
-    }
-    @include media-breakpoint-up(lg) {
         pointer-events: all;
     }
 }

@@ -11236,18 +11236,14 @@ body {
 
 .img-magnifier-container {
   position: relative;
-}
-@media (min-width: 992px) {
-  .img-magnifier-container:hover .img-magnifier-glass {
-    opacity: 1;
-  }
-}
-.img-magnifier-container img {
   pointer-events: none;
 }
 @media (min-width: 992px) {
   .img-magnifier-container {
     pointer-events: all;
+  }
+  .img-magnifier-container:hover .img-magnifier-glass {
+    opacity: 1;
   }
 }
 
