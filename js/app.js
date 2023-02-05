@@ -8,8 +8,8 @@ const dropdownMenuWork = document.querySelector('.header__menu--dropdown--work-n
 const dropdownMenuPhotography = document.querySelector('.header__menu--dropdown--photography-nested');
 const backArrow = document.querySelectorAll('.arrow-container img');
 
-console.log(dropdownMenu);
 window.addEventListener('scroll', function() {
+    console.log(header);
     if (window.scrollY > 5) {
         header.classList.add('setBackground');
     }
@@ -25,7 +25,6 @@ menuBurger.addEventListener('click', function() {
     // if (dropdownMenuPhotography.classList.contains('show')) {
     //     dropdownMenuPhotography.classList.remove('show');
     // }
-    console.log(dropdownMenu);
     menuBurger.classList.toggle('change');
     dropdownMenu.classList.toggle('show');
     // dropdownMenuWork.classList.toggle('show');

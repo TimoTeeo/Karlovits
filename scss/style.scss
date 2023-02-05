@@ -24,7 +24,7 @@
 }
 
 html {
-    overflow-x: hidden;
+    // overflow-x: hidden;
 }
 
 #gallery-modal {
@@ -34,7 +34,7 @@ html {
 }
 
 body {
-    overflow-x: hidden;
+    // overflow-x: hidden;
     height: 100vh;
     width: 100%;
     background-color: $primary !important;
@@ -225,10 +225,11 @@ body {
         img {
             
             position: absolute;
-            right: -20px;
+            right: 0;
             bottom: -60px;
             width: auto;
-            max-height: 700px;
+            max-height: 580px;
+            pointer-events: none;
             // object-fit: fill;
             z-index: 1;
             @include media-breakpoint-up(md) {

@@ -10784,16 +10784,11 @@ textarea.form-control-lg {
   text-decoration: none !important;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 #gallery-modal .modal-img {
   width: 100%;
 }
 
 body {
-  overflow-x: hidden;
   height: 100vh;
   width: 100%;
   background-color: #f0fbf7 !important;
@@ -10985,10 +10980,11 @@ body {
 }
 .header__image img {
   position: absolute;
-  right: -20px;
+  right: 0;
   bottom: -60px;
   width: auto;
-  max-height: 700px;
+  max-height: 580px;
+  pointer-events: none;
   z-index: 1;
 }
 @media (min-width: 768px) {
