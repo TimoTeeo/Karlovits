@@ -31,12 +31,12 @@ menuBurger.addEventListener('click', function() {
     // dropdownMenuWork.classList.toggle('show');
 })
 
-workLink.addEventListener('click', function(e) {
-    console.log(e);
-    e.stopPropagation();
-    menuBurger.classList.add('change');
-    dropdownMenuWork.classList.add('show')
-})
+// workLink.addEventListener('click', function(e) {
+//     console.log(e);
+//     e.stopPropagation();
+//     menuBurger.classList.add('change');
+//     dropdownMenuWork.classList.add('show')
+// })
 // photographyLink.addEventListener('click', function(e) {
 //     console.log(e);
 //     e.stopPropagation();

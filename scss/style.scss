@@ -1,5 +1,10 @@
 @use 'custom' as *;
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,400&display=swap');
 
 @font-face {
     font-family: capitol;
@@ -33,7 +38,7 @@ body {
     width: 100%;
     background-color: $primary !important;
     // background-color: #000 !important;
-    font-family: 'Martian Mono', monospace !important;
+    font-family: 'Josefin sans', monospace !important;
 }
 
 .container {
@@ -47,6 +52,17 @@ body {
 .header {
     .container {
         position: relative;
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+            img {
+                margin-top: 18px;
+                width: 60px;
+                height: auto;
+            }
+        }
     }
     display: flex;
     height: 120px;
@@ -197,17 +213,48 @@ body {
         }
     }
     &__image {
-        position: absolute;
-        top: 100px;
-        right: 0;
+        // position: absolute;
+        // top: 100px;
+        // right: 0;
         z-index: -1;
         @include media-breakpoint-up(lg) {
-            top: 100px;
-            right: 10%;
+            // top: 100px;
+            // right: 10%;
         }
         img {
-            max-width: 100%;
-            height: auto;
+            
+            position: absolute;
+            right: 0;
+            bottom: -60px;
+            width: auto;
+            max-height: 600px;
+            // object-fit: fill;
+            @include media-breakpoint-up(md) {
+                max-height: 800px;
+                right: 50px;
+                bottom: -80px;
+            }
+            @include media-breakpoint-up(lg) {
+                right: 100px;
+                bottom: -120px;
+            }
+        }
+
+        &--sign {
+            img {
+                position: absolute;
+                right: 0;
+                bottom: -60px;
+                width: 100%;
+                height: 800px;
+                // object-fit: fill;
+                @include media-breakpoint-up(md) {
+                    bottom: -80px;
+                }
+                @include media-breakpoint-up(lg) {
+                    bottom: -120px;
+                }
+            }
         }
     }
 
@@ -231,7 +278,8 @@ body {
 }
 
 .main {
-    margin-top: 50px;
+    position: relative;
+    margin-top: 120px;
     min-height: 80vh;
 }
 
@@ -263,8 +311,29 @@ body {
                 margin: 0 30px 0 0;
             }
             a {
+                position: relative;
                 text-decoration: none;
                 color: #fff;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: #fff;
+                    height: 1px;
+                    width: 100%;
+                    bottom: -1px;
+                    left: 0;
+                    opacity: 0;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                
             }
         }
     }
@@ -273,17 +342,33 @@ body {
 // INFO PAGE
 .about {
     margin-top: 120px;
+    
+    &--title {
+        margin-top: 20px !important;
+        font-weight: 700;
+        font-size: 22px;
+        @include media-breakpoint-up(md) {
+            margin-top: 50px !important;
+            font-size: 28px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 35px;
+        }
+    }
+
     &--info {
         flex-direction: column;
         row-gap: 50px;
         justify-content: center;
         align-items: center;
+        margin-top: 50px !important;
     }
     @include media-breakpoint-up(md) {
         padding-top: 40px;
     }
     @include media-breakpoint-up(lg) {
         padding-top: 50px;
+        margin-top: 50px;
         &--info {
             flex-direction: row;
             row-gap: 50px;
@@ -297,6 +382,20 @@ body {
 
 .work {
     margin-top: 120px;
+
+    &-title {
+        margin-top: 25px !important;
+        font-weight: 700;
+        font-size: 22px;
+        @include media-breakpoint-up(md) {
+            margin-top: 50px !important;
+            font-size: 28px;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 35px;
+        }
+    }
+
     &-grid-categories {
         margin-top: 50px;
         @include media-breakpoint-up(md) {
@@ -313,6 +412,20 @@ body {
             flex-direction: column;
             align-items: center;
             row-gap: 20px;
+
+            a {
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                height: auto !important;
+            }
+            @include media-breakpoint-up(md) {
+                img {
+                    object-fit: cover;
+                    height: 400px !important;
+                }
+            }
         }
     }
 }
