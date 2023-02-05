@@ -11140,7 +11140,7 @@ body {
 }
 @media (min-width: 992px) {
   .img-magnifier-container:hover .img-magnifier-glass {
-    display: block;
+    opacity: 1;
   }
 }
 .img-magnifier-container img {
@@ -11158,9 +11158,10 @@ body {
   border-radius: 50%;
   cursor: none;
   /*Set the size of the magnifier glass:*/
-  width: 200px;
-  height: 200px;
-  display: none;
+  width: 250px;
+  height: 250px;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
