@@ -19,12 +19,12 @@ window.addEventListener('scroll', function() {
 })
 
 menuBurger.addEventListener('click', function() {
-    if (dropdownMenuWork.classList.contains('show')) {
-        dropdownMenuWork.classList.remove('show');
-    }
-    if (dropdownMenuPhotography.classList.contains('show')) {
-        dropdownMenuPhotography.classList.remove('show');
-    }
+    // if (dropdownMenuWork.classList.contains('show')) {
+    //     dropdownMenuWork.classList.remove('show');
+    // }
+    // if (dropdownMenuPhotography.classList.contains('show')) {
+    //     dropdownMenuPhotography.classList.remove('show');
+    // }
     console.log(dropdownMenu);
     menuBurger.classList.toggle('change');
     dropdownMenu.classList.toggle('show');
