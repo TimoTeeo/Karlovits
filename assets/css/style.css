@@ -10793,6 +10793,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   height: 100vh;
   width: 100%;
   background-color: #f0fbf7 !important;
@@ -10984,14 +10985,15 @@ body {
 }
 .header__image img {
   position: absolute;
-  right: 0;
+  right: -20px;
   bottom: -60px;
   width: auto;
-  max-height: 600px;
+  max-height: 700px;
+  z-index: 1;
 }
 @media (min-width: 768px) {
   .header__image img {
-    max-height: 800px;
+    max-height: 1000px;
     right: 50px;
     bottom: -80px;
   }
