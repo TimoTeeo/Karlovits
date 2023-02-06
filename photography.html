@@ -3,22 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Homepage</title>
-    <link rel="icon" type="image/x-icon" href="/img/favicon.jpeg">
+    <title>Work</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   </head>
   <body> 
     <header class="header">
       <div class="container d-flex align-items-center justify-content-between">
-          <a class="logo-container" href="/index.html">
-            <img src="/img/logo.png" alt="logo">
+          <a href="/index.html">
             <div class="header__title">KARLOVITS MYRTO</div>
           </a>
           <div class="header__menu" id="header-menu">
             <div class="bar1"></div>
             <div class="bar2"></div>
-            <div class="bar3"></div>    
+            <div class="bar3"></div>            
           </div>
           <div class="header__menu--dropdown">
             <ul>
@@ -28,7 +26,7 @@
                 </a>
               </li>
               <li class="photography-link">
-                <a href="/photography.html">
+                <a href="#">
                   Photography
                 </a>
               </li>
@@ -68,15 +66,59 @@
       </div>
     </header>
     <main class="main">
-      <div class="notes">
-        
-      </div>
-      <div class="header__image">
-        <img src="/img/homepage-background.png" alt="logo">
-      </div>
-      <div class="header__image--sign">
-        <img src="/img/homepage-sign.png" alt="logo">
-      </div>
+      <section class="work">
+        <div class="container">
+          <div class="row">
+            <div class="cell text-center work-title">
+              Categories
+            </div>
+          </div>
+        </div>
+        <div class="container work-grid-categories">
+          <div class="row">
+            <div class="cell col-lg-3 col-md-4 col-12">
+                <a href="/templates/work_entries/studies/studies.html">
+                  <img src="/img/studies/studies-1.jpg" class="img-fluid" alt="category">
+                </a>
+                <div class="work-grid-categories--title">
+                  Textures of earth
+                </div>
+            </div>
+            <div class="cell col-lg-3 col-md-4 col-12">
+              <a href="/templates/work_entries/illustration/illustration.html">
+                <img src="/img/illustration/illustration-1.jpeg" class="img-fluid" alt="category">
+              </a>
+              <div class="work-grid-categories--title">
+                World
+              </div>
+            </div>
+            <div class="cell col-lg-3 col-md-4 col-12">
+              <a href="/templates/work_entries/abstract/abstract.html">
+                <img src="/img/abstract/abstract-1.jpeg" class="img-fluid" alt="category">
+              </a>
+              <div class="work-grid-categories--title">
+                Summertime
+              </div>
+            </div>
+            <div class="cell col-lg-3 col-md-4 col-12">
+              <a href="/templates/work_entries/portraits/portraits.html">
+                <img src="/img/portraits/portraits-1.jpg" class="img-fluid" alt="category">
+              </a>
+              <div class="work-grid-categories--title">
+                A day in the life
+              </div>
+            </div>
+            <div class="cell col-lg-3 col-md-4 col-12">
+              <a href="/templates/work_entries/sculpture/sculpture.html">
+                <img src="/img/sculpture/sculpture-1.jpeg" class="img-fluid" alt="category">
+              </a>
+              <div class="work-grid-categories--title">
+                Projects
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container d-flex align-items-center justify-content-center">
