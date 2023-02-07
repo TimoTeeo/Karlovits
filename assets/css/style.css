@@ -11147,6 +11147,7 @@ body {
     margin-top: 50px;
   }
   .about--info {
+    font-size: 18px;
     flex-direction: row;
     row-gap: 50px;
     justify-content: center;
