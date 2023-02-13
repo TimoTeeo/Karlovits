@@ -9,7 +9,6 @@ const dropdownMenuPhotography = document.querySelector('.header__menu--dropdown-
 const backArrow = document.querySelectorAll('.arrow-container img');
 
 window.addEventListener('scroll', function() {
-    console.log(header);
     if (window.scrollY > 5) {
         header.classList.add('setBackground');
     }
