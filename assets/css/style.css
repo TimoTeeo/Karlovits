@@ -11254,7 +11254,12 @@ body {
 .painting .image-selections-container .painting--image-selections img {
   object-fit: cover;
   width: 100%;
-  max-height: 90px;
+  max-height: 50px;
+}
+@media (min-width: 992px) {
+  .painting .image-selections-container .painting--image-selections img {
+    max-height: 90px;
+  }
 }
 
 .img-magnifier-container {
