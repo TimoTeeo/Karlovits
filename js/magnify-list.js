@@ -1,7 +1,6 @@
 const imgs = document.querySelectorAll('.img-select a');
 const imgBtns = [...imgs];
 let imgId = 1;
-console.log(imgBtns[0].dataset.id);
 slideImage(imgBtns[0].dataset.id);
 imgBtns.forEach((imgItem) => {
     imgItem.addEventListener('click', (event) => {
@@ -17,13 +16,22 @@ function slideImage(imgId){
     // document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
 
     const imgs = document.querySelectorAll('.painting--info--main-images img');
-    console.log(imgs);
-    console.log(imgId);
+    const descriptions = document.querySelectorAll('.painting--info__description .desc');
+    console.log(descriptions);
     
     imgs.forEach(element => {
         if(element.dataset.id === imgId) {
             element.style.display = "block";
-            console.log(element.id);
+            if(descriptions) {
+              for (let i=0; i<descriptions.length; i++) {
+                if(descriptions[i].dataset.id === element.dataset.id) {
+                  descriptions[i].style.display = "block";
+                }
+                else {
+                  descriptions[i].style.display = "none";
+                }
+              }
+            }
             magnify(element.id, 3);
         } else {
             element.style.display = "none";
@@ -38,13 +46,7 @@ function magnify(imgID, zoom) {
     img = document.getElementById(imgID);
     
     const imgsMagn = document.querySelectorAll('.img-magnifier-glass');
-    if(imgsMagn) {
-      imgsMagn.forEach(image => {
-        if (image.id != imgID) {
-          document.getElementById(image.id).remove();
-        }
-      })
-    }
+    
     /* Create magnifier glass: */
     glass = document.createElement("DIV");
     glass.setAttribute("class", "img-magnifier-glass");
@@ -100,5 +102,11 @@ function magnify(imgID, zoom) {
       x = x - window.pageXOffset;
       y = y - window.pageYOffset;
       return {x : x, y : y};
+    }
+
+    if(imgsMagn) {
+      imgsMagn.forEach(image => {
+        document.getElementById(image.id).remove();
+      })
     }
   }

@@ -71,8 +71,10 @@
         <section class="painting">
             <div class="container">
                 <div class="row justify-content-center painting--info">
-                    <div class="col col-lg-4 col-sm-12 d-flex justify-content-center modal-body img-magnifier-container">
-                        <img src="/img/abstract/abstract-2.jpeg" id="myimage" class="img-fluid gallery-item" alt="profile">
+                    <div class="col col-lg-4 col-sm-12 d-flex justify-content-center modal-body img-magnifier-container painting--info--main-images">
+                        <img src="/img/abstract/abstract-2.jpeg" id="myimage1" class="img-fluid gallery-item" data-id="1" alt="profile">
+                        <img src="/img/abstract/abstract-2b.jpeg" id="myimage2" class="img-fluid gallery-item"  data-id="2" style="display:none;" alt="profile">
+                        <img src="/img/abstract/abstract-2c.jpeg" id="myimage3" class="img-fluid gallery-item"  data-id="3" style="display:none;" alt="profile">
                     </div>
                     <div class="col offset-lg-1 col-lg-7 col-sm-12 d-flex flex-column justify-content-start">
                         <div class="painting--info__description">
@@ -87,24 +89,25 @@
                         </div>
                     </div>
                 </div>
-                <!-- Button trigger modal -->
-                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                </button> -->
-                
-                <!-- Modal -->
-                <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <!-- <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1> -->
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="/img/abstract/abstract-2.jpeg" class="img-fluid modal-img" alt="profile">
-                        </div>
-                    </div>
-                    </div>
+                <div class="row pt-2 image-selections-container">
+                  <div class="col col-lg-1 col-md-4 col-sm-12 d-flex justify-content-center painting--image-selections img-select  px-0">
+                    <a href=""  data-id="1" >
+                      <img src="/img/abstract/abstract-2.jpeg" id="myimage1" class="img-fluid gallery-item" alt="profile">
+                    </a>
+                    <!-- <img src="/img/sculpture/sculpture-1.jpeg" id="myimage" class="img-fluid gallery-item" alt="profile"> -->
+                  </div>
+                  <div class="col col-lg-1 col-md-4 col-sm-12 d-flex justify-content-center painting--image-selections img-select px-0">
+                    <a href=""  data-id="2" >
+                      <img src="/img/abstract/abstract-2b.jpeg" id="myimage2" class="img-fluid gallery-item" alt="profile">
+                    </a>
+                    <!-- <img src="/img/sculpture/sculpture-1.jpeg" id="myimage" class="img-fluid gallery-item" alt="profile"> -->
+                  </div>
+                  <div class="col col-lg-1 col-md-4 col-sm-12 d-flex justify-content-center painting--image-selections img-select px-0">
+                    <a href=""  data-id="3" >
+                      <img src="/img/abstract/abstract-2c.jpeg" id="myimage3" class="img-fluid gallery-item" alt="profile">
+                    </a>
+                    <!-- <img src="/img/sculpture/sculpture-1.jpeg" id="myimage" class="img-fluid gallery-item" alt="profile"> -->
+                  </div>
                 </div>
             </div>
         </section>
@@ -124,7 +127,7 @@
         </ul>
       </div>
     </footer>
-    <script src="/js/magnify.js"></script>
+    <script src="/js/magnify-list.js" defer></script>
     
     <script src="/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
