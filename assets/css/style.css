@@ -10973,7 +10973,9 @@ body {
   left: 0;
   transition: all 0.4s ease-in-out;
 }
-.header__menu .bar1, .header__menu .bar2, .header__menu .bar3 {
+.header__menu .bar1,
+.header__menu .bar2,
+.header__menu .bar3 {
   width: 35px;
   height: 5px;
   background-color: #333;
@@ -10981,7 +10983,9 @@ body {
   transition: 0.4s;
 }
 @media (min-width: 768px) {
-  .header__menu .bar1, .header__menu .bar2, .header__menu .bar3 {
+  .header__menu .bar1,
+  .header__menu .bar2,
+  .header__menu .bar3 {
     width: 35px;
     height: 5px;
   }
@@ -11264,7 +11268,6 @@ body {
 
 .img-magnifier-container {
   position: relative;
-  pointer-events: none;
 }
 @media (min-width: 992px) {
   .img-magnifier-container {
@@ -11311,7 +11314,8 @@ body {
   color: inherit;
 }
 
-.lb-nav a.lb-next, .lb-nav a.lb-prev {
+.lb-nav a.lb-next,
+.lb-nav a.lb-prev {
   opacity: 1 !important;
 }
 
@@ -11338,6 +11342,90 @@ body {
 
 .photo-gallery .item {
   padding-bottom: 30px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
+
+body {
+  background: #000;
+  color: #000;
+}
+
+.swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  box-sizing: border-box;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev:after {
+  content: "" !important;
+}
+
+.swiper-button-prev {
+  background-image: url("/img/angle-left-solid.svg") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-next:after {
+  content: "" !important;
+}
+
+.swiper-button-next {
+  background-image: url("/img/angle-right-solid.svg") !important;
+  background-repeat: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -18,29 +18,9 @@ window.addEventListener('scroll', function() {
 })
 
 menuBurger.addEventListener('click', function() {
-    // if (dropdownMenuWork.classList.contains('show')) {
-    //     dropdownMenuWork.classList.remove('show');
-    // }
-    // if (dropdownMenuPhotography.classList.contains('show')) {
-    //     dropdownMenuPhotography.classList.remove('show');
-    // }
     menuBurger.classList.toggle('change');
     dropdownMenu.classList.toggle('show');
-    // dropdownMenuWork.classList.toggle('show');
 })
-
-// workLink.addEventListener('click', function(e) {
-//     console.log(e);
-//     e.stopPropagation();
-//     menuBurger.classList.add('change');
-//     dropdownMenuWork.classList.add('show')
-// })
-// photographyLink.addEventListener('click', function(e) {
-//     console.log(e);
-//     e.stopPropagation();
-//     menuBurger.classList.add('change');
-//     dropdownMenuPhotography.classList.add('show')
-// })
 
 backArrow.forEach((arrow) => {
     arrow.addEventListener('click', function(e) {
