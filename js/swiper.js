@@ -8,6 +8,7 @@ const swiper = new Swiper('.mySwiper', {
 })
 
 const swiperThumb = new Swiper('.mySwiper2', {
+    grabCursor: true,
     spaceBetween: 10,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -17,5 +18,8 @@ const swiperThumb = new Swiper('.mySwiper2', {
     thumbs: {
       swiper: swiper,
     },
-    zoom: true,
+    zoom: {
+        maxRatio: 1.5,
+        minRation: 1
+    },
 })
