@@ -1,9 +1,7 @@
-// import Swiper from "swiper";
-
 const swiper = new Swiper('.mySwiper', {
     spaceBetween: 10,
     slidesPerView: 4.2,
-    // freeMode: true,
+    slideToClickedSlide: true,
     watchSlidesProgress: true
 })
 
